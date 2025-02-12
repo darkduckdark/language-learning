@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>語言卡片練習</title>
+  <style>
+    .card{
+      width: 150px;
+      height: 150px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition:transform 1s;
+      /* background-color:wheat */
+    }
+    .card:hover{
+      transform:rotateY(180deg)
+    }
+    .card-front, .card-back{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display:flex;
+      justify-content:center;
+      align-items: center;
+      font-size: 24px;
+      color:white;
+      backface-visibility:hidden;
+    }
+    .card-front{
+      background-color:red
+    }
+    .card-back{
+      background-color: aquamarine;
+      transform:rotateY(180deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-front"> ###</div>
+    <div class="card-back"> !!! </div>
+  </div>
+</body>
+</html>
